@@ -1,0 +1,217 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, user-scalable=no"><link href="res/0.css" rel="stylesheet" type="text/css"><!-- Export CSS  --><style> @import url(http://fonts.googleapis.com/css?family=Lemon);
+ @import url(http://fonts.googleapis.com/css?family=Titillium+Web);
+ @import url(http://fonts.googleapis.com/css?family=Raleway);
+@import url(http://fonts.googleapis.com/css?family=Abel);
+/*CSS for ALL*/
+#home-btn{
+  float:left;
+}
+/*CSS for home*/
+#home-img{
+  margin-top:30%;
+  margin-left:5%;
+  width:90%;
+}
+#home-arrow-r{
+  float:left;
+}
+#home-arrow-l{
+  float:right;
+}
+#left-menu{
+  opacity:0.3;
+  width:20%;
+}
+#right-menu{
+  opacity:0.3;
+  width:20%;
+}
+/*CSS for mainfunc*/
+#city-name {
+  width: 100%;
+  margin-top:5%;
+  font-size: 30px;
+  color: #fff;
+  margin-left:33%;
+  opacity:.9;
+}
+
+#city-temp-c {
+  position: relative;
+  display: table;
+  font-size: 120px;
+  margin: 0 auto;
+  text-shadow: 0 0 20px #000, 0 0 10px #000;
+  color: #fff;
+  line-height:120px;
+  -webkit-transition:.5s;
+  -moz-transition:.5s;
+  transition:.5s;
+  opacity:1;
+}
+
+#city-temp-c.temphide , #city-temp-f.temphide{
+  opacity:0;
+}
+#temp-btn-box{
+  margin-top:5%;
+  margin-left:10%;
+}
+/*CSS for bbox*/
+.font5 {
+  font-family: 'Lemon';
+  color:#fff;
+  text-shadow: 0 0 20px #000, 0 0 10px #000;
+  margin-left:30%;
+  
+}
+#gk-total-length{
+   font-family: '微軟正黑體';
+  color:#000;
+  font-weight:bold;
+}
+/*CSS for help*/
+#help-title {
+  font-family: 'Lemon';
+  color:#fff;
+  text-shadow: 0 0 20px #000, 0 0 10px #000;
+  margin-left:37%;
+  
+}
+/*CSS for news*/
+#news-title {
+  font-family: 'Lemon';
+  color:#fff;
+  text-shadow: 0 0 20px #000, 0 0 10px #000;
+  margin-left:37%;
+}
+</style><script src="res/1.js"></script><script>   $(document).on("mobileinit", function () {     $.mobile.autoInitializePage = false;     $.mobile.hashListeningEnabled = false;   });   function mobileInitPage() {     $.mobile.hashListeningEnabled = true;     $.mobile.initializePage();   };</script><script src="res/2.js"></script><!-- Uncomment the following to include cordova in your android project --><!--<script src="//ezoui.com/platforms/android/cordova.js"></script>--><!-- GK Loader use RequireJS to load module --><script src="res/3.js"></script><!--Plug in GK--><script src="components/jquery.gk/jquery.gk.min.js"></script><!-- Load GK components --><script components="components/gk-ext/gk-text.html,components/gk-ext/json-listview.html,components/gk-jquerymobile/listview-li.html,components/gk-ext/rss-news.html,components/gk-ext/image.html,components/gk-ext/gk-position.html,components/flot/google-sheets-chart-bar.html" callback="mobileInitPage" src="components/gk-loader/gk-loader.min.js"></script><!-- Export JS  --><script>/*JS for news*/
+$(document).on("gkComponentsReady", function () {
+  var $ele = $("#gk-428PVoA"),
+    FEED_URL = $ele.attr("service"),
+    $listview = $("#gk-428PVoA").find('[data-role="listview"]');
+  rowNum = $ele.attr('rowNum');
+
+  $('.menu li').on('click', function () {
+    FEED_URL = $(this).attr('apple');
+    fn_rss(FEED_URL);
+  });
+
+  fn_rss(FEED_URL);
+
+  function fn_rss(FEED_URL) {
+    if (FEED_URL) {
+      $.ajax({
+        beforeSend: function () {
+          $listview.css('visibility', 'hidden');
+        },
+        url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=' + rowNum + '&callback=?&q=' + encodeURIComponent(FEED_URL),
+        dataType: 'json',
+        success: function (data) {
+          if (data.responseData.feed && data.responseData.feed.entries) {
+            var models = data.responseData.feed.entries;
+            $listview.gk('model', models);
+            $listview.css('visibility', 'visible');
+          }
+        }
+      });
+    }
+  }
+
+});
+/*JS for mainfunc*/
+$(document).on('pageshow', '#mainfunc',  function () {
+  function onSuccess(position) {
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
+    t=new Date();
+    $("#gk-57xhj2").html("Latitude: " + latitude + "<br /> Longitude: " + longitude+ "<br /> "+t);
+  }
+
+  function onError(error) {
+    // onError Callback receives a PositionError object  
+  }
+  if (navigator.geolocation) {
+    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, {
+      timeout: 10000
+    });
+  }
+});</script><title>EZo App</title></head><body gk-app=""><!-- Page: home  --><div id="home" data-role="page" style="background:-webkit-linear-gradient(#bff0f7 10%,#c4dbf5 30%,#e3e6ff)">
+  <div role="main" class="ui-content">
+    <a id="home-arrow-r" class="ui-btn ui-icon-arrow-r ui-btn-icon-notext ui-corner-all" href="#left-menu" data-transition="pop"></a>
+    <a id="home-arrow-l" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all" href="#right-menu"></a>
+    <a href="#mainfunc" data-transition="pop">
+      <img id="home-img" src="https://lh5.googleusercontent.com/GCvORLAfWH3dMKvTRYbuTDv6X2fkmTkFxeu_EwnsdjVD-uBfADWVSju7AHw1HD-G_5HWFBCVvD_6kA=w1256-h819" is="image">
+    </a>
+    <div id="left-menu" data-role="panel" data-position="left" data-theme="a" data-position-fixed="false" data-display="overlay">
+      <span>
+        <a class="ui-btn ui-btn-active" data-theme="b" data-rel="close"></a>
+      </span>
+      <a class="ui-btn ui-btn-active" data-theme="b" data-rel="close" href="#help">1</a>
+      <a class="ui-btn" data-theme="b" data-rel="close" href="#news">2</a>
+      <a class="ui-btn" data-theme="b" data-rel="close" href="#bbox">3</a>
+    </div>
+    <div id="right-menu" data-role="panel" data-position="right" data-theme="b" data-position-fixed="false" data-display="overlay"></div>
+  </div>
+</div>
+<!-- Page: mainfunc  --><div id="mainfunc" data-role="page" style="background:-webkit-linear-gradient(#bff0f7 10%,#c4dbf5 30%,#e3e6ff)">
+  <div role="main" class="ui-content">
+    <a id="home-btn" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all" href="#home"></a>
+    <div id="city-name" onselectstart="return false">Chungli</div>
+  </div>
+  <div id="city-temp">
+    <div id="city-temp-c" onselectstart="return false">30.2</div>
+  </div>
+  <div>
+    <div id="gk-57xhj2" is="gk-position">Position</div>
+  </div>
+</div>
+<!-- Page: bbox  --><div id="bbox" data-role="page" style="background:-webkit-linear-gradient(#bff0f7 10%,#c4dbf5 30%,#e3e6ff)">
+  <div role="main" class="ui-content">
+    <a id="home-btn" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all" href="#home"></a>
+    <h1 is="gk-text" class="font5">B-BOX</h1>
+    <div is="google-sheets-chart-bar" id="gk-total-length" key="1mja2gdDqRA1hZ-s7VjXj_3zrX2-666heBvQjTvdYx8A" gid="600995961" width="290px" height="160px" mode="categories" valuelabels="false" barwidth="0.4"></div>
+    <div></div>
+  </div>
+</div>
+<!-- Page: help  --><div id="help" data-role="page" style="background:-webkit-linear-gradient(#bff0f7 10%,#c4dbf5 30%,#e3e6ff)">
+  <div role="main" class="ui-content">
+    <a id="home-btn" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all" href="#home"></a>
+    <h1 is="gk-text" id="help-title">HELP</h1>
+  </div>
+</div>
+<!-- Page: news  --><div id="news" data-role="page" style="background:-webkit-linear-gradient(#bff0f7 10%,#c4dbf5 30%,#e3e6ff)">
+  <div role="main" class="ui-content">
+    <a id="home-btn" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all" href="#home"></a>
+    <h1 is="gk-text" id="news-title">News</h1>
+    <div data-role="navbar" class="menu">
+      <ul>
+        <li apple="http://www.appledaily.com.tw/rss/newcreate/kind/rnews/type/103">
+          <a class="">&#x570B;&#x969B;&#x65B0;&#x805E;</a>
+        </li>
+        <li apple="http://www.appledaily.com.tw/rss/newcreate/kind/rnews/type/102">
+          <a>&#x793E;&#x6703;&#x65B0;&#x805E;</a>
+        </li>
+        <li apple="http://www.appledaily.com.tw/rss/newcreate/kind/rnews/type/107">
+          <a>&#x9AD4;&#x58C7;&#x7126;&#x9EDE;</a>
+        </li>
+      </ul>
+    </div>
+    <div role="main" class="ui-content">
+      <div id="gk-428PVoA" is="rss-news" service="http://www.appledaily.com.tw/rss/newcreate/kind/rnews/type/111" rownum="3" class="rss">
+        <ul data-role="listview" data-autodividers="true" data-inset="true" is="json-listview">
+          <li divider="{{publishedDate}}" is="listview-li">
+            <span>{{title}}</span>
+            <br>
+            <span style="color:#666;font-size:0.8em;white-space: normal;">{{contentSnippet}}</span>
+            <br>
+            <span style="color:#666;font-size:0.8em;white-space: normal;">
+              <a href="{{link}}" target="_blank">link</a>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

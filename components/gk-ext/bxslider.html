@@ -1,0 +1,66 @@
+<script src="../bxSlider/dist/jquery.bxslider.min.js"></script>
+
+<element name='bxslider'>
+
+  <template>
+    <link rel="stylesheet" href="../bxSlider/dist/jquery.bxslider.css" />
+    <link rel="stylesheet" href="bxslider/cssreset.css" />
+    <div id='{{id}}' style='{{style}}'>
+      <ul style='{{style}}' captions='{{captions}}' class='bxslider'>
+        <content></content>
+      </ul>
+    </div>
+  </template>
+
+  <script>
+  function getPageId($ele) {
+    return '#' + $ele.closest('[data-role="page"]').attr('id');
+  }
+
+  registerElement('bxslider', {
+
+    bxSlider: null,
+
+    init: function() {
+      var self = this,
+        pageId;
+
+      if ($.mobile) {
+        pageId = getPageId(self.$ele);
+        $(document).on('pagebeforeshow', pageId, function() {
+          self.hideSlider_();
+        });
+        $(document).on('pageshow', pageId, function() {
+          self.showSlider_();
+        });
+      } else {
+        self.hideSlider_();
+        $(document).on('gkComponentsReady', function() {
+          self.showSlider_();
+        });
+      }
+    },
+
+    hideSlider_: function() {
+      if (this.bxSlider === null) {
+        var $slider = this.$ele.find('.bxslider');
+        if ($slider.length) {
+          $slider.css('visibility', 'hidden');
+        }
+      }
+    },
+
+    showSlider_: function() {
+      if (this.bxSlider === null) {
+        var $slider = this.$ele.find('.bxslider');
+        if ($slider.length) {
+          this.bxSlider = $slider.bxSlider();
+          $slider.css('visibility', 'visible');
+        }
+      }
+    }
+
+  });
+  </script>
+
+</element>

@@ -1,0 +1,19 @@
+{
+  "name": "flot",
+  "license": "MIT",
+  "dependencies": {
+    "gk-loader": "master",
+    "gk-ext": "master",
+    "jquery": "~1.9.1"
+  },
+  "homepage": "https://github.com/ezoapp/flot",
+  "_release": "c8d3639160",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "c8d36391600cd4fa28e05176d524e5085c6ae233"
+  },
+  "_source": "git://github.com/ezoapp/flot.git",
+  "_target": "master",
+  "_originalSource": "ezoapp/flot"
+}
