@@ -21,11 +21,11 @@
   "devDependencies": {
     "gk-loader": "master"
   },
-  "_release": "bba1e6db2f",
+  "_release": "0dc63b6503",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "bba1e6db2fcd0b02be42716b9a6bb69dabf71ad9"
+    "commit": "0dc63b65031347ce166dcfa0e1d6193ea3cd90c3"
   },
   "_source": "git://github.com/ezoapp/gk-ext.git",
   "_target": "master",

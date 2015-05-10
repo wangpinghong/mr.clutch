@@ -58,6 +58,14 @@
   margin-left:10%;
 }
 /*CSS for bbox*/
+#bbox-title {
+  font-family: 'Lemon';
+  color:#fff;
+  text-shadow: 0 0 20px #000, 0 0 10px #000;
+  margin-left:30%;
+  
+}
+/*CSS for weeks*/
 .font5 {
   font-family: 'Lemon';
   color:#fff;
@@ -85,7 +93,144 @@
   text-shadow: 0 0 20px #000, 0 0 10px #000;
   margin-left:37%;
 }
-</style><script src="res/1.js"></script><script>   $(document).on("mobileinit", function () {     $.mobile.autoInitializePage = false;     $.mobile.hashListeningEnabled = false;   });   function mobileInitPage() {     $.mobile.hashListeningEnabled = true;     $.mobile.initializePage();   };</script><script src="res/2.js"></script><!-- Uncomment the following to include cordova in your android project --><!--<script src="//ezoui.com/platforms/android/cordova.js"></script>--><!-- GK Loader use RequireJS to load module --><script src="res/3.js"></script><!--Plug in GK--><script src="components/jquery.gk/jquery.gk.min.js"></script><!-- Load GK components --><script components="components/gk-ext/gk-text.html,components/gk-ext/json-listview.html,components/gk-jquerymobile/listview-li.html,components/gk-ext/rss-news.html,components/gk-ext/image.html,components/gk-ext/gk-position.html,components/flot/google-sheets-chart-bar.html" callback="mobileInitPage" src="components/gk-loader/gk-loader.min.js"></script><!-- Export JS  --><script>/*JS for news*/
+/*CSS for settings*/
+#setting-title {
+  font-family: 'Lemon';
+  color:#fff;
+  text-shadow: 0 0 20px #000, 0 0 10px #000;
+  margin-left:28%;
+}@import url(http://fonts.googleapis.com/css?family=Titillium+Web);
+ @media screen and (max-width: 400px) {
+  .gk-component-simple-weather h2 {
+    margin-top: -5px!important;
+    font-size: 50px!important;
+  }
+  .gk-component-simple-weather i {
+    width: 120px!important;
+    height: 90px!important;
+  }
+  .gk-component-simple-weather i img {
+    width: 180px!important;
+  }
+}
+.gk-component-simple-weather {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid #999;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  background: -webkit-linear-gradient(top, #999 0%, #ccc 30%, #aaa 70%, #888 100%);
+  background: -moz-linear-gradient(top, #999 0%, #ccc 30%, #aaa 70%, #888 100%);
+  background: linear-gradient(top, #999 0%, #ccc 30%, #aaa 70%, #888 100%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .9)
+}
+.gk-component-simple-weather i {
+  display: block;
+  width: 140px;
+  height: 100px;
+  margin: 10px auto 0;
+  overflow: hidden;
+}
+.gk-component-simple-weather i img {
+  width: 200px;
+}
+.gk-component-simple-weather h2 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 70px;
+  font-weight: 300;
+  text-align: center;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+}
+.gk-component-simple-weather ul {
+  margin: 0 10px 10px;
+  padding: 0;
+}
+.gk-component-simple-weather li {
+  font-family: "Titillium Web";
+  background: #fff;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 4px 8px;
+  display: inline-block;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .7);
+  margin: 0 2px 10px;
+  font-size: 12px;
+}
+.gk-component-simple-weather p {
+  font-family: "Titillium Web";
+  text-shadow: none;
+  font-size: 12px;
+}@import url(http://fonts.googleapis.com/css?family=Titillium+Web);
+ @media screen and (max-width: 400px) {
+  .gk-component-simple-weather h2 {
+    margin-top: -5px!important;
+    font-size: 50px!important;
+  }
+  .gk-component-simple-weather i {
+    width: 120px!important;
+    height: 90px!important;
+  }
+  .gk-component-simple-weather i img {
+    width: 180px!important;
+  }
+}
+.gk-component-simple-weather {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid #999;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  background: -webkit-linear-gradient(top, #999 0%, #ccc 30%, #aaa 70%, #888 100%);
+  background: -moz-linear-gradient(top, #999 0%, #ccc 30%, #aaa 70%, #888 100%);
+  background: linear-gradient(top, #999 0%, #ccc 30%, #aaa 70%, #888 100%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .9)
+}
+.gk-component-simple-weather i {
+  display: block;
+  width: 140px;
+  height: 100px;
+  margin: 10px auto 0;
+  overflow: hidden;
+}
+.gk-component-simple-weather i img {
+  width: 200px;
+}
+.gk-component-simple-weather h2 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 70px;
+  font-weight: 300;
+  text-align: center;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+}
+.gk-component-simple-weather ul {
+  margin: 0 10px 10px;
+  padding: 0;
+}
+.gk-component-simple-weather li {
+  font-family: "Titillium Web";
+  background: #fff;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 4px 8px;
+  display: inline-block;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .7);
+  margin: 0 2px 10px;
+  font-size: 12px;
+}
+.gk-component-simple-weather p {
+  font-family: "Titillium Web";
+  text-shadow: none;
+  font-size: 12px;
+}</style><!-- Load Polymer elements  --><script src="components/platform/platform.js"></script><link rel="import" href="components/core-icons/core-icons.html"><link rel="import" href="components/voice-elements/dist/voice-player.html">
+<script src="res/1.js"></script><script>   $(document).on("mobileinit", function () {     $.mobile.autoInitializePage = false;     $.mobile.hashListeningEnabled = false;   });   function mobileInitPage() {     $.mobile.hashListeningEnabled = true;     $.mobile.initializePage();   };</script><script src="res/2.js"></script><!-- Uncomment the following to include cordova in your app project --><!--<script src="//ezoui.com/platforms/android_or_ios/cordova.js"></script>--><!-- GK Loader use RequireJS to load module --><script src="res/3.js"></script><!--Plug in GK--><script src="components/jquery.gk/jquery.gk.min.js"></script><!-- Load GK components --><script components="components/gk-ext/gk-text.html,components/gk-ext/json-listview.html,components/gk-jquerymobile/listview-li.html,components/gk-ext/rss-news.html,components/gk-ext/image.html,components/gk-ext/gk-position.html,components/flot/google-sheets-chart-bar.html" callback="mobileInitPage" src="components/gk-loader/gk-loader.min.js"></script><!-- Export JS  --><script>/*JS for news*/
 $(document).on("gkComponentsReady", function () {
   var $ele = $("#gk-428PVoA"),
     FEED_URL = $ele.attr("service"),
@@ -120,28 +265,27 @@ $(document).on("gkComponentsReady", function () {
 
 });
 /*JS for mainfunc*/
-$(document).on('pageshow', '#mainfunc',  function () {
+$(document).on('pageshow', '#mainfunc', function () {
   function onSuccess(position) {
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
-    t=new Date();
-    $("#gk-57xhj2").html("Latitude: " + latitude + "<br /> Longitude: " + longitude+ "<br /> "+t);
+    t = new Date();
+    $("#gk-57xhj2").html("Latitude: " + latitude + "<br /> Longitude: " + longitude + "<br /> " + t);
   }
-
-  function onError(error) {
-    // onError Callback receives a PositionError object  
+function onError(error) {
+// onError Callback receives a PositionError object  
   }
   if (navigator.geolocation) {
     var watchID = navigator.geolocation.watchPosition(onSuccess, onError, {
       timeout: 10000
     });
   }
-});</script><title>EZo App</title></head><body gk-app=""><!-- Page: home  --><div id="home" data-role="page" style="background:-webkit-linear-gradient(#bff0f7 10%,#c4dbf5 30%,#e3e6ff)">
+});</script><title>EZo App</title></head><body gk-app="" unresolved="" touch-action="auto"><!-- Page: home  --><div id="home" data-role="page" style="background:-webkit-linear-gradient(#67CEC1 10%,#67CEBA 20%,#67CEE8">
   <div role="main" class="ui-content">
     <a id="home-arrow-r" class="ui-btn ui-icon-arrow-r ui-btn-icon-notext ui-corner-all" href="#left-menu" data-transition="pop"></a>
     <a id="home-arrow-l" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all" href="#right-menu"></a>
     <a href="#mainfunc" data-transition="pop">
-      <img id="home-img" src="https://lh5.googleusercontent.com/GCvORLAfWH3dMKvTRYbuTDv6X2fkmTkFxeu_EwnsdjVD-uBfADWVSju7AHw1HD-G_5HWFBCVvD_6kA=w1256-h819" is="image">
+      <img id="home-img" src="res/4.png" is="image">
     </a>
     <div id="left-menu" data-role="panel" data-position="left" data-theme="a" data-position-fixed="false" data-display="overlay">
       <span>
@@ -150,37 +294,18 @@ $(document).on('pageshow', '#mainfunc',  function () {
       <a class="ui-btn ui-btn-active" data-theme="b" data-rel="close" href="#help">1</a>
       <a class="ui-btn" data-theme="b" data-rel="close" href="#news">2</a>
       <a class="ui-btn" data-theme="b" data-rel="close" href="#bbox">3</a>
+      <a class="ui-btn" data-theme="b" data-rel="close" href="#setting">4</a>
     </div>
     <div id="right-menu" data-role="panel" data-position="right" data-theme="b" data-position-fixed="false" data-display="overlay"></div>
   </div>
 </div>
-<!-- Page: mainfunc  --><div id="mainfunc" data-role="page" style="background:-webkit-linear-gradient(#bff0f7 10%,#c4dbf5 30%,#e3e6ff)">
-  <div role="main" class="ui-content">
-    <a id="home-btn" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all" href="#home"></a>
-    <div id="city-name" onselectstart="return false">Chungli</div>
-  </div>
-  <div id="city-temp">
-    <div id="city-temp-c" onselectstart="return false">30.2</div>
-  </div>
-  <div>
-    <div id="gk-57xhj2" is="gk-position">Position</div>
-  </div>
-</div>
-<!-- Page: bbox  --><div id="bbox" data-role="page" style="background:-webkit-linear-gradient(#bff0f7 10%,#c4dbf5 30%,#e3e6ff)">
-  <div role="main" class="ui-content">
-    <a id="home-btn" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all" href="#home"></a>
-    <h1 is="gk-text" class="font5">B-BOX</h1>
-    <div is="google-sheets-chart-bar" id="gk-total-length" key="1mja2gdDqRA1hZ-s7VjXj_3zrX2-666heBvQjTvdYx8A" gid="600995961" width="290px" height="160px" mode="categories" valuelabels="false" barwidth="0.4"></div>
-    <div></div>
-  </div>
-</div>
-<!-- Page: help  --><div id="help" data-role="page" style="background:-webkit-linear-gradient(#bff0f7 10%,#c4dbf5 30%,#e3e6ff)">
+<!-- Page: help  --><div id="help" data-role="page" style="background:-webkit-linear-gradient(#67CEC1 10%,#67CEBA 20%,#67CEE8">
   <div role="main" class="ui-content">
     <a id="home-btn" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all" href="#home"></a>
     <h1 is="gk-text" id="help-title">HELP</h1>
   </div>
 </div>
-<!-- Page: news  --><div id="news" data-role="page" style="background:-webkit-linear-gradient(#bff0f7 10%,#c4dbf5 30%,#e3e6ff)">
+<!-- Page: news  --><div id="news" data-role="page" style="background:-webkit-linear-gradient(#67CEC1 10%,#67CEBA 20%,#67CEE8">
   <div role="main" class="ui-content">
     <a id="home-btn" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all" href="#home"></a>
     <h1 is="gk-text" id="news-title">News</h1>
@@ -212,6 +337,69 @@ $(document).on('pageshow', '#mainfunc',  function () {
         </ul>
       </div>
     </div>
+  </div>
+</div>
+<!-- Page: setting  --><div id="setting" data-role="page" style="background:-webkit-linear-gradient(#67CEC1 10%,#67CEBA 20%,#67CEE8">
+  <div role="main" class="ui-content">
+    <a id="home-btn" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all" href="#home"></a>
+    <h1 is="gk-text" id="setting-title">setting</h1>
+    <div class="ui-field-contain">
+      <label for="gk-51173tR">&#x7701;&#x96FB;&#x6A21;&#x5F0F;</label>
+      <input type="checkbox" data-role="flipswitch" id="gk-51173tR" data-theme="a" data-corners="true">
+    </div>
+  </div>
+</div>
+<!-- Page: bbox  --><div id="bbox" data-role="page" style="background:-webkit-linear-gradient(#67CEC1 10%,#67CEBA 20%,#67CEE8">
+  <div role="main" class="ui-content">
+    <a id="home-btn" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all" href="#home"></a>
+    <h1 is="gk-text" class="font5">weeks</h1>
+    <div is="google-sheets-chart-bar" id="gk-total-length" key="1mja2gdDqRA1hZ-s7VjXj_3zrX2-666heBvQjTvdYx8A" gid="600995961" width="290px" height="300px" mode="categories" valuelabels="false" barwidth="0.4"></div>
+    <div></div>
+  </div>
+  <div>
+    <div data-role="navbar" style="margin:0 0 -5px;">
+      <ul>
+        <li>
+          <a data-icon="star" data-theme="a" href="#weeks" class="ui-btn-active ui-state-persist">weekly</a>
+        </li>
+        <li>
+          <a data-icon="star" data-theme="a" href="#month" data-transition="none">monthly</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- Page: month  --><div id="month" data-role="page" style="background:-webkit-linear-gradient(#67CEC1 10%,#67CEBA 20%,#67CEE8">
+  <div role="main" class="ui-content">
+    <a id="home-btn" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all" href="#home"></a>
+    <h1 is="gk-text" class="font5">month</h1>
+    <div is="google-sheets-chart-bar" id="gk-month-length" key="1mja2gdDqRA1hZ-s7VjXj_3zrX2-666heBvQjTvdYx8A" gid="826229346" width="290px" height="300px" mode="categories" valuelabels="false" barwidth="0.4"></div>
+  </div>
+  <div data-role="navbar" style="margin:0 0 -5px;">
+    <ul>
+      <li>
+        <a data-icon="star" data-theme="a" href="#bbox" data-transition="none">weekly</a>
+      </li>
+      <li>
+        <a data-icon="star" data-theme="a" href="#month" class="ui-btn-active ui-state-persist">monthly</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- Page: mainfunc  --><div id="mainfunc" data-role="page" style="background:-webkit-linear-gradient(#67CEC1 10%,#67CEBA 20%,#67CEE8">
+  <div role="main" class="ui-content">
+    <a id="home-btn" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all" href="#home"></a>
+    <div id="city-name" onselectstart="return false">Chungli</div>
+  </div>
+  <div id="city-temp">
+    <div id="city-temp-c" onselectstart="return false">30.2
+    </div>
+  </div>
+  <div>
+    <div id="gk-57xhj2" is="gk-position">Position</div>
+     <a class="ui-btn" id="gk-5110ofy" onclick="document.querySelector(&apos;#gk-5110ofy_voice&apos;).speak()">
+        <voice-player id="gk-5110ofy_voice" text="this is a test" accent="en">test</voice-player>
+      </a>
   </div>
 </div>
 </body></html>
